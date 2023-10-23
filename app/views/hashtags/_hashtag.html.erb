@@ -1,0 +1,13 @@
+<div class="col">
+  <%=link_to hashtag do%>
+      <div class="card">
+        <img src="/uploads/<%=hashtag.image%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%=hashtag.name%></h5>
+                      <%if params[:action] =="index" and params[:controller] == "hashtags"%>
+                        <p class="card-text">  <%=link_to "edit this hashtg",edit_hashtag_path(hashtag.id)%></p>
+                            <%end%>
+                                            </div>
+                                                </div>
+                                              <%end%>
+                                                  </div>

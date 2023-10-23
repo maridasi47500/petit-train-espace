@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Hashtags</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+  <% @hashtags.each do |hashtag| %>
+    <%= render hashtag %>
+  <% end %>
+
+</div>
+
+<%= link_to "New hashtag", new_hashtag_path %>
