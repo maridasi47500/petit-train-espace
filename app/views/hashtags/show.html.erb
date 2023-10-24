@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @hashtag %>
-<%@hashtag.tweets.length > 0%>
+<%if @hashtag.mytweets.length > 0%>
 <ul>
-<%@hashtag.tweets.each do |tweet|%>
+<%@hashtag.mytweets.each do |tweet|%>
   <li><%=tweet.content%></li>
 
 <%end%>
@@ -13,7 +13,7 @@
 <%end%>
 
 <p></p>
-<%=render "tweets/form",tweet:Tweet.new(hashtag_id:@hashtag.id)%>
+<%=render "mytweets/form",mytweet:Mytweet.new(hashtag_id:@hashtag.id)%>
 <div>
   <%= link_to "Edit this hashtag", edit_hashtag_path(@hashtag) %> |
   <%= link_to "Back to hashtags", hashtags_path %>

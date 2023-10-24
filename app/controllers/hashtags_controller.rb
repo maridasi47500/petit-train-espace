@@ -8,7 +8,7 @@ class HashtagsController < ApplicationController
 
   # GET /hashtags/1 or /hashtags/1.json
   def show
-    @tweets=Ads_client.search('#'+@hashtag.name)  
+    @tweets=@hashtag.mytweets
   end
 
   # GET /hashtags/new
