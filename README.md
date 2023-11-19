@@ -14,4 +14,4 @@ api_key: ENV["api_key"],
 
 et source ~/.bash_profile
 # petit-train-espace
-- rumeurs sur l'espace ? partage les ici
+- rumeurs sur twitter ? partage les ici
