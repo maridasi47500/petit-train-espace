@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :mytweets, as: "tweets"
   resources :mytweets
   resources :hashtags

@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+<%if @user.mytweets.length > 0%>
+<ul>
+<%@user.mytweets.each do |tweet|%>
+  <li><%=tweet.content%></li>
+
+<%end%>
+</ul>
+<%else%>
+  <p>vous n'avez pas encore tweeté avec cet user</p>
+<%end%>
+
+<p></p>
+<%=render "mytweets/otherform",mytweet:Mytweet.new(content:["@",@user.pseudo].join)%>
+<div>
+
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
+
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>

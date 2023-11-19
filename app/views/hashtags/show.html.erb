@@ -13,7 +13,7 @@
 <%end%>
 
 <p></p>
-<%=render "mytweets/form",mytweet:Mytweet.new(hashtag_id:@hashtag.id)%>
+<%=render "mytweets/form",mytweet:Mytweet.new(hashtag_id:@hashtag.id,content:["#",@hashtag.name].join)%>
 <div>
   <%= link_to "Edit this hashtag", edit_hashtag_path(@hashtag) %> |
   <%= link_to "Back to hashtags", hashtags_path %>
