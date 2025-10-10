@@ -1,4 +1,6 @@
 # petit train de l'espace :rocket:
+
+- tweet quelque chose de nouveau @new_visitor #new_tweet
  - sauver les twitter mot de passe dans ~/.bash_profile
 en faisant 
 export api_key="cle_secret"
